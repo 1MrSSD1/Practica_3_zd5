@@ -29,17 +29,17 @@ namespace Pr3_005
         {
             double x = double.Parse(xBox.Text);
             double y = double.Parse(yBox.Text);
-            if (x >= -1 && x <= 1 && y >= 0 && y <= 2)
+            if (x >= 0 && x <= 70 && y >= 0 && y <= 70)
             {
                 txtOtv.Text = "Да";
             }
-            else if (x < -1 || x > 1 || y < 0 || y > 2)
+            else if (x == 0 || y == 0 || x == 70 || y == 70)
             {
-                txtOtv.Text = "Нет";
+                txtOtv.Text = "На границе";
             }
             else
             {
-                txtOtv.Text = "На границе";
+                txtOtv.Text = "Нет";
             }
         }
     }
